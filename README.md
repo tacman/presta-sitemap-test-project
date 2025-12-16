@@ -14,13 +14,14 @@ The default database is sqlite, so just create it. In production, use postgres a
 ```bash
 bin/console doctrine:schema:update --force --complete
 bin/console doctrine:fixtures:load --no-interaction
+bin/console presta:sitemaps:dump
 symfony server:start -d
 symfony open:local
 ```
 
 **Dump your sitemap**
 
-The bundle does not require it, but you should definitively dump the sitemaps instead of generating it at every request.
+The bundle does not require it(??), but you should definitively dump the sitemaps instead of generating it at every request.
 
 ```bash
 bin/console presta:sitemaps:dump
