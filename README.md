@@ -2,16 +2,20 @@
 
 **Require dependencies**
 
-```bash
+```bash 
+git clone git@github.com:tacman/presta-sitemap-test-project.git presta && cd presta
 composer install
 ```
 
 **Prepare database entities**
 
+The default database is sqlite, so just create it. In production, use postgres and migrations.
+
 ```bash
-bin/console doctrine:database:create
 bin/console doctrine:schema:update --force --complete
 bin/console doctrine:fixtures:load --no-interaction
+symfony server:start -d
+symfony open:local
 ```
 
 **Dump your sitemap**
