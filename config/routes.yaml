@@ -4,8 +4,3 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-app_xml:
-    resource: "routes/application/xml.xml"
-
-app_yml:
-    resource: "routes/application/yaml.yaml"
